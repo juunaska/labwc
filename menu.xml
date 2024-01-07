@@ -2,6 +2,15 @@
 <openbox_menu>
 
 <menu id="root-menu" label="root-menu">
+
+		<item label="KDE Connect" icon="lol">
+			<action name="Execute"><command>kdeconnect-app</command></action>
+		</item>
+
+
+
+
+
 		<item label="Firefox Web Browser" icon="firefox">
 			<action name="Execute"><command>/usr/lib/firefox/firefox</command></action>
 		</item>
@@ -348,6 +357,17 @@
 		<item label="Waydroid" icon="waydroid">
 			<action name="Execute"><command>waydroid first-launch</command></action>
 		</item>
-	</menu> <!-- Other -->
+
+		</menu> <!-- Other -->
+	
+		<item label="Shutdown" icon="/home/test/SweetHome3D-7.1/SweetHome3DIcon.png">
+			<action name="Execute"><command>systemctl -i poweroff</command></action>
+
+
+		</item>
+
+
+
+
 </menu> <!-- root-menu -->
 </openbox_menu>

@@ -1,6 +1,19 @@
 <?xml version="1.0"?>
 <!--
-  This is a very simple config file with many options missing. For a complete
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█░░░░░░██░
+░░░░░░░░░░░░░░░░░░░█░░░░░██░░░█░░████░░░
+░░░░░░░░█░░░███████░█░░░░██░░░███░░░░░░░
+░░█░░░░██░░░░█░░░██░░█░░████░█░█░░░░░░░░
+░░█░░░░█░█░░░█░███░░░░█░█░░█░█░░███░░░░░
+░░█░░█░█░██░░███████░░██░░░███░░░░██████
+░░█░░███████████░░██░░░█░░░░██░░░░░░░░░░
+░░█░░░█░░░░█░░█░██░░░░░░░░░░█░░░░░░░░░░░
+░░███████░░██░██░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+This is a very simple config file with many options missing. For a complete
   set of options with comments, see docs/rc.xml.all
 -->
 <labwc_config>
@@ -8,9 +21,9 @@
     <gap>1</gap>
   </core>
   <theme>
-    <name>Clia-Dark</name>
+    <name>Clia-Black</name>
     <cornerRadius>10</cornerRadius>
-    <font name="CaskaydiaCove Nerd Font" size="11"/>
+    <font name="JetBrainsMono Nerd Font" size="16"/>
   </theme>
   <focus>
     <followMouse>yes</followMouse>
@@ -22,11 +35,20 @@
   </snapping>
   <keyboard>
     <default/>
+    <keybind key="W-S-BackSpace">
+      <action name="systemctl -i poweroff"/>
+    </keybind>
+    <keybind key="W-q">
+      <action name="Close"/>
+    </keybind>
     <keybind key="W-S-q">
       <action name="Close"/>
     </keybind>
     <keybind key="W-Return">
       <action name="Execute" command="kitty"/>
+    </keybind>
+    <keybind key="W-A-n">
+      <action name="Execute" command="waypaper"/>
     </keybind>
     <keybind key="W-w">
       <action name="Execute" command="/home/test/.config/waybar/./labwc-waybar-hide.sh"/>
@@ -37,11 +59,16 @@
     <keybind key="W-d">
       <action name="Execute" command="rofi -show run"/>
     </keybind>
+    <keybind key="W-r">
+      <action name="Execute" command="labwc -r"/>
+    </keybind>
     <keybind key="W-m">
       <action name="Exit"/>
     </keybind>
-    <keybind key="W-S-r">
-      <action name="Reconfigure"/>
+    <keybind key="W-k">
+      <action name="ToggleMaximize"/>
+      <action name="Focus"/>
+      <action name="Raise"/>
     </keybind>
     <keybind key="W-o">
       <action name="GoToDesktop" to="left"/>
@@ -49,10 +76,8 @@
     <keybind key="W-p">
       <action name="GoToDesktop" to="Right"/>
     </keybind>
-    <keybind key="W-k">
-      <action name="ToggleMaximize"/>
-      <action name="Focus"/>
-      <action name="Raise"/>
+    <keybind key="W-TAB">
+      <action name="GoToDesktop" to="Right"/>
     </keybind>
     <keybind key="W-1">
       <action name="GoToDesktop" to="1"/>
@@ -63,14 +88,17 @@
     <keybind key="W-3">
       <action name="GoToDesktop" to="3"/>
     </keybind>
+    <keybind key="W-4">
+      <action name="GoToDesktop" to="4"/>
+    </keybind>
     <keybind key="XF86_AudioLowerVolume">
-      <action name="Execute" command="amixer sset Master 5%-"/>
+      <action name="Execute" command="pamixer -d 10"/>
     </keybind>
     <keybind key="XF86_AudioRaiseVolume">
-      <action name="Execute" command="amixer sset Master 5%+"/>
+      <action name="Execute" command="pamixer -i 10"/>
     </keybind>
     <keybind key="XF86_AudioMute">
-      <action name="Execute" command="amixer sset Master toggle"/>
+      <action name="Execute" command="pamixer sset Master toggle"/>
     </keybind>
     <keybind key="XF86_MonBrightnessUp">
       <action name="Execute" command="brightnessctl -q set 2%+"/>
@@ -83,11 +111,13 @@
     <default/>
     <!-- Show a custom menu on desktop right click -->
     <context name="Root">
-      <mousebind button="Right" action="Press">
-        <action name="None"/>
+      <mousebind button="Middle" action="Press">
+        <action name="ShowMenu" menu="rightmenu"/>
       </mousebind>
+    </context>
+    <context name="Root">
       <mousebind button="Left" action="Press">
-        <action name="None"/>
+        <action name="ShowMenu" menu="rightmenu"/>
       </mousebind>
     </context>
   </mouse>
@@ -97,11 +127,12 @@
       <name>I</name>
       <name>II</name>
       <name>III</name>
+      <name>IIII</name>
     </names>
   </desktops>
   <libinput>
     <device>
-      <naturalScroll>yes</naturalScroll>
+      <naturalScroll>no</naturalScroll>
     </device>
   </libinput>
 </labwc_config>
