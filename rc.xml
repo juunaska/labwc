@@ -36,7 +36,7 @@ This is a very simple config file with many options missing. For a complete
   <keyboard>
     <default/>
     <keybind key="W-S-BackSpace">
-      <action name="systemctl -i poweroff"/>
+      <action name="Execute" command="systemctl -i poweroff"/>
     </keybind>
     <keybind key="W-q">
       <action name="Close"/>
@@ -59,6 +59,12 @@ This is a very simple config file with many options missing. For a complete
     <keybind key="W-d">
       <action name="Execute" command="rofi -show run"/>
     </keybind>
+    
+    <keybind key="W-g">
+      <action name="Execute" command="grim"/>
+    </keybind>
+
+
     <keybind key="W-r">
       <action name="Execute" command="labwc -r"/>
     </keybind>
@@ -76,6 +82,12 @@ This is a very simple config file with many options missing. For a complete
     <keybind key="W-p">
       <action name="GoToDesktop" to="Right"/>
     </keybind>
+    <keybind key="C-o">
+      <action name="GoToDesktop" to="left"/>
+    </keybind>
+    <keybind key="C-p">
+      <action name="GoToDesktop" to="Right"/>
+    </keybind>
     <keybind key="W-TAB">
       <action name="GoToDesktop" to="Right"/>
     </keybind>
@@ -91,7 +103,8 @@ This is a very simple config file with many options missing. For a complete
     <keybind key="W-4">
       <action name="GoToDesktop" to="4"/>
     </keybind>
-    <keybind key="XF86_AudioLowerVolume">
+
+       <keybind key="XF86_AudioLowerVolume">
       <action name="Execute" command="pamixer -d 10"/>
     </keybind>
     <keybind key="XF86_AudioRaiseVolume">
@@ -100,6 +113,7 @@ This is a very simple config file with many options missing. For a complete
     <keybind key="XF86_AudioMute">
       <action name="Execute" command="pamixer sset Master toggle"/>
     </keybind>
+   
     <keybind key="XF86_MonBrightnessUp">
       <action name="Execute" command="brightnessctl -q set 2%+"/>
     </keybind>
