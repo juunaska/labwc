@@ -25,8 +25,8 @@
 		</item>
 	
 
-		<item label="pyradio" icon="(null)">
-			<action name="Execute"><command>/home/test/pyradio.sh</command></action>
+		<item label="Pyradio" icon="(null)">
+			<action name="Execute"><command>kitty -e pyradio</command></action>
 		</item>
 
 
