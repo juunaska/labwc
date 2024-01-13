@@ -22,7 +22,7 @@ This is a very simple config file with many options missing. For a complete
   </core>
   <theme>
     <name>RosePine</name>
-    <cornerRadius>10</cornerRadius>
+    <cornerRadius>20</cornerRadius>
     <font name="JetBrainsMono Nerd Font" size="16"/>
   </theme>
   <focus>
@@ -34,6 +34,10 @@ This is a very simple config file with many options missing. For a complete
     <range>1</range>
     <topMaximize>yes</topMaximize>
   </snapping>
+
+
+  <!-- Keybindings --> 
+
   <keyboard>
     <default/>
     <keybind key="W-S-BackSpace">
@@ -137,8 +141,8 @@ This is a very simple config file with many options missing. For a complete
       <action name="ResizeTo" width="1400"> </action>
     </keybind>
     <keybind key="W-A-l">
-      <action name="SnapToEdge" direction="right"> </action>
-      <action name="ResizeTo" width="1100"> </action>
+      <action name="SnapToEdge" direction="left"> </action>
+      <action name="ResizeTo" width="1400"> </action>
     </keybind>
     <!-- Send to desktop -->
     <keybind key="W-S-1">
